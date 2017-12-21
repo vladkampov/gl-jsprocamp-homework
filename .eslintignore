@@ -1,0 +1,6 @@
+*.*rc
+node_modules/
+test/
+dist/
+conf/
+coverage/

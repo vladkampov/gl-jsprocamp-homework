@@ -1,0 +1,35 @@
+{
+  "name": "gl-procamp-base",
+  "version": "1.0.0",
+  "description": "Base project for studying in GL Pro Canp academy",
+  "main": "src/index.js",
+  "author": "Vladyslav Kampov",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.3",
+    "babel-jest": "^22.0.3",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "eslint": "^4.13.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1",
+    "jest": "^22.0.3",
+    "path": "^0.12.7",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --config conf/webpack.config.js",
+    "build": "webpack --config conf/webpack.config.js --progress --profile",
+    "lint": "eslint ./src/**.js",
+    "coverage": "jest --coverage --config=conf/jest.config.js",
+    "test": "jest --config=conf/jest.config.js",
+    "test:watch": "jest --watch"
+  }
+}

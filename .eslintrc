@@ -1,0 +1,98 @@
+{
+  "extends": [
+    "eslint-config-airbnb"
+  ],
+  "rules": {
+    "import/extensions": ["off"],
+    "import/first": ["error", null],
+    "import/order": "warn",
+    "class-methods-use-this": ["error"],
+    "no-param-reassign": ["error", { "props": false }],
+    "indent": ["warn", 2, {"SwitchCase": 1}],
+    "max-len": ["warn", {
+      "code": 110
+    }],
+    "comma-dangle": ["warn", {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "ignore"
+    }],
+    "no-shadow": "off",
+    "no-case-declarations": "off",
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "ForInStatement",
+        "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array."
+      },
+      {
+        "selector": "ForOfStatement",
+        "message": "iterators/generators require regenerator-runtime, which is too heavyweight for this guide to allow them. Separately, loops should be avoided in favor of array iterations."
+      },
+      {
+        "selector": "LabeledStatement",
+        "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
+      },
+      {
+        "selector": "WithStatement",
+        "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
+      }
+    ],
+    "comma-spacing": ["warn", { "before": false, "after": true }],
+    "camelcase": ["warn", { "properties": "never" }],
+    "keyword-spacing": ["warn", {
+      "before": true,
+      "after": true,
+      "overrides": {
+        "return": { "after": true },
+        "throw": { "after": true },
+        "case": { "after": true }
+      }
+    }],
+    "semi": ["warn", "always"],
+    "no-underscore-dangle": ["warn", { "allowAfterThis": false }],
+    "no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": true }],
+    "object-curly-spacing": ["warn", "always"],
+    "quote-props": ["warn", "as-needed", { "keywords": false, "unnecessary": true, "numbers": false }],
+    "space-before-function-paren": ["warn", {
+      "anonymous": "always",
+      "named": "never",
+      "asyncArrow": "always"
+    }],
+    "spaced-comment": ["warn", "always", {
+      "line": {
+        "exceptions": ["-", "+"],
+        "markers": ["=", "!"]
+      },
+      "block": {
+        "exceptions": ["-", "+"],
+        "markers": ["=", "!"],
+        "balanced": true
+      }
+    }],
+    "prefer-template": "warn",
+    "prefer-const": ["warn", {
+      "destructuring": "any",
+      "ignoreReadBeforeAssign": true
+    }],
+    "prefer-arrow-callback": ["warn", {
+      "allowNamedFunctions": false,
+      "allowUnboundThis": true
+    }],
+    "arrow-parens": ["warn", "as-needed"],
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "padded-blocks": "off",
+    "eol-last": "warn",
+    "no-trailing-spaces": "warn",
+    "quotes": "warn",
+    "no-multiple-empty-lines": "warn"
+  },
+  "env" : {
+    "jest": true,
+    "node": true
+  },
+  "parser": "babel-eslint",
+  "plugins": ["babel"]
+}
