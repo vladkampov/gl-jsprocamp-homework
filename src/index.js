@@ -1,7 +1,7 @@
-import lesson0 from './lesson0';
 import lesson1 from './lesson1';
+import lesson2 from './lesson2';
 
 export default {
-  lesson0, // example lesson
   lesson1,
+  lesson2,
 };
