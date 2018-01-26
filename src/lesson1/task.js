@@ -148,6 +148,18 @@ function calcComparison(expression) {
 
 }
 
+/*
+  Напишите функцию, которая принимает обьект и строку,
+  содержащую выражение доступа к свойствам обьекта.
+  Функция возвращает значение запрашиваемого свойства либо
+  бросает exception в случае ошибки.
+  { a: { x: 2 }, b: 5 }, '.a.x' => 2
+  { a: 1, b: 2 }, '.c' => exception
+*/
+function evalKey(obj, expression) {
+
+}
+
 export default {
   getDataType,
   getDataTypePseudoName,
@@ -163,5 +175,6 @@ export default {
   removeNegative,
   without,
   calcExpression,
-  calcComparison
+  calcComparison,
+  evalKey
 };
